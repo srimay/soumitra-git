@@ -1,0 +1,9 @@
+---
+- hosts: wiseskool
+  tasks:
+  - name: Copy a file to vastech folder
+    copy:
+     src: /var/lib/jenkins/workspace/Test-proj/repo/test.txt
+     dest: /home
+     
+ 

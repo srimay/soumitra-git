@@ -1,0 +1,16 @@
+---
+- hosts: wiseskool
+  tasks:
+  - name: Check Server version
+    shell: "{{ item }}"
+    with_items:
+      - uname -a
+      - lsb_release -a
+      - df -h
+      - free -m
+     
+    register: shell_result
+ 
+  - debug: var=shell_result
+
+#- include: copy_file.yaml
